@@ -15,16 +15,15 @@ private:
 	Array _arrGrades;
 
 public:
-	
-	 Student(std::string name, int age, bool isMan, int numGroup);
+	Student(std::string name, int age, bool isMan, int numGroup);
 	~Student();
 	void addGrade(int grade);
 	void printAllGrades();
 	void printInfAboutStudent();
 	void delAllGrades();
-
-
+	std::string getName();
+	void setName(std::string name);
+	int getAge();
+	void setAge(int age);
 
 };
-
-

@@ -11,9 +11,14 @@ public:
 	Array(int size = 0);
 	Array(const Array& temp);
 	~Array();
+	
 	void setArr(const Array* temp);
-	void addToBakc(int num);
+	int getSize() const;
+	void pushBack(int value);
 	void printAllArr() const;
 	void delAllArr();
+	void setValueByIndex(int index, int value);
+	int getValueByIndex(int index) const;
+	int searchValue(int index) const;
 
 };

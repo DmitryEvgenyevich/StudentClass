@@ -15,7 +15,7 @@ Student::~Student()
 
 void Student::addGrade(int grade)
 {
-	this->_arrGrades.addToBakc(grade);
+	this->_arrGrades.pushBack(grade);
 }
 
 void Student::printAllGrades()
@@ -26,11 +26,11 @@ void Student::printAllGrades()
 void Student::printInfAboutStudent()
 {
 	std::string temp = this->_isMan ? "MAN" : "WOMEN";
-	
+
 	std::cout << "Id:\t" << this->_id << '\n';
 	std::cout << "Name:\t" << this->_name << '\n';
 	std::cout << "Age:\t" << this->_age << '\n';
-	std::cout << ":\t" << temp << '\n';
+	std::cout << "Gender:\t" << temp << '\n';
 	std::cout << "Group:\t" << this->_numGroup << '\n';
 	this->printAllGrades();
 }
@@ -38,4 +38,24 @@ void Student::printInfAboutStudent()
 void Student::delAllGrades()
 {
 	this->_arrGrades.delAllArr();
+}
+
+std::string Student::getName()
+{
+	return this->_name;
+}
+
+void Student::setName(std::string name)
+{
+	this->_name = name;
+}
+
+void Student::setAge(int age)
+{
+	this->_age = age;
+}
+
+int Student::getAge()
+{
+	return this->_age;
 }
