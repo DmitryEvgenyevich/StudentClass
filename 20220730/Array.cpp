@@ -1,7 +1,6 @@
 #include "Array.h"
 
-Array::Array(int size) :
-	_size{ size }
+Array::Array()
 {}
 
 Array::Array(const Array& temp) :

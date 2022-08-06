@@ -12,9 +12,10 @@ private:
 	int _age;
 	bool _isMan;
 	int _numGroup;
-	Array _arrGrades;
+
 
 public:
+	Array _arrGrades;
 	Student(std::string name, int age, bool isMan, int numGroup);
 	~Student();
 	void addGrade(int grade);

@@ -13,6 +13,8 @@ int main()
     A.addGrade(5);
     A.addGrade(5);
     A.addGrade(2);
+    std::cout << A._arrGrades.getSize();
+
 
     B.addGrade(4);
     B.addGrade(5);

@@ -8,7 +8,7 @@ private:
 	int* _arr;
 
 public:
-	Array(int size = 0);
+	Array();
 	Array(const Array& temp);
 	~Array();
 	
