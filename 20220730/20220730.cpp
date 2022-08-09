@@ -8,12 +8,11 @@ int main()
     Student B{ "Vika", 17, 0, 5 };
     Student C{ "Vova", 18, 1, 2 };
     
-    std::vector<Student> student{ A, B, C };
-
     A.addGrade(5);
     A.addGrade(5);
     A.addGrade(2);
-    std::cout << A._arrGrades.getSize();
+
+    std::cout << "\n" << A._arrGrades.getSize();
 
 
     B.addGrade(4);
@@ -23,6 +22,10 @@ int main()
     C.addGrade(2);
     C.addGrade(5);
     C.addGrade(2);
+
+    std::vector<Student> student{ A, B, C };
+
+    
 
     for (int i{}; i < student.size(); ++i)
         student[i].printInfAboutStudent();

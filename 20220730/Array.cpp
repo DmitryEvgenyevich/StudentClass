@@ -5,8 +5,11 @@ Array::Array()
 
 Array::Array(const Array& temp) :
 	_size{ temp._size },
-	_arr{ temp._arr }
-{}
+	_arr{ new int[_size] }
+{
+	for (int i{}; i < _size; ++i)
+		_arr[i] = temp._arr[i];
+}
 
 Array::~Array()
 {
@@ -14,10 +17,10 @@ Array::~Array()
 		delete[] this->_arr;
 }
 
-void Array::setArr(const Array* temp)
+void Array::setArr(const Array temp)
 {
-	for (int i{}; i < temp->_size; ++i)
-		this->_arr[i] = temp->_arr[i];
+	for (int i{}; i < temp._size; ++i)
+		this->_arr[i] = temp._arr[i];
 }
 
 int Array::getSize() const
@@ -30,7 +33,7 @@ void Array::pushBack(int value)
 	const Array temp{ *this };
 	++this->_size;
 	this->_arr = new int[_size];
-	this->setArr(&temp);
+	this->setArr(temp);
 	this->_arr[_size - 1] = value;
 }
 

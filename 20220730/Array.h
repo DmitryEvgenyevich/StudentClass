@@ -12,7 +12,7 @@ public:
 	Array(const Array& temp);
 	~Array();
 	
-	void setArr(const Array* temp);
+	void setArr(const Array temp);
 	int getSize() const;
 	void pushBack(int value);
 	void printAllArr() const;
