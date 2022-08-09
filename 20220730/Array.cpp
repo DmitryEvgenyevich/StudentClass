@@ -32,6 +32,7 @@ void Array::pushBack(int value)
 {
 	const Array temp{ *this };
 	++this->_size;
+	this->~Array();
 	this->_arr = new int[_size];
 	this->setArr(temp);
 	this->_arr[_size - 1] = value;
